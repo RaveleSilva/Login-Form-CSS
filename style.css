@@ -190,6 +190,7 @@ button{
     
     .form-container{
         padding: 5vw;
+        align-items: flex-start;
     }
 
     form{
