@@ -1,0 +1,201 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 120vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+.email > label,
+.password > label,
+.forget-link,
+button,
+form > p{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, button, .forget-link, .register-link{
+    font-weight: 600;
+}
+
+.header-description, .email > label, .password > label{
+    color: #AFB6C2;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.input::placeholder, .checkbox-container > label{
+    color: #A9AFB9;
+}
+
+.forget-link, .register-ask, .register-link{
+    color: var(--primary-color);
+}
+
+input::placeholder, .checkbox-container > label{
+    color: #A9AFB9;
+}
+
+input::placeholder,
+.register-ask,
+.register-link,
+.forget-link{
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+form{
+    background-color: var(--form-background);
+    padding: 55px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    top: -90px;
+    left: 0;
+}
+
+header{
+    margin-bottom: 7px;
+}
+
+.header-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+h1{
+    font-size: 24px;
+    color: #D4CCB6;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+
+.input > img{
+    width: 20px;
+    position: absolute;
+    top: 42px;
+    left: 10px;
+}
+
+input{
+    padding: 14px 0px 14px 37px;
+    border-radius: 4px;
+    border: 1px solid #868686;
+    background-color: var(--form-background);
+    color: var(--text-base);
+}
+
+input::placeholder::before{
+    content: url(images/mail.svg);
+    display: inline-block;
+}
+
+input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: 1px solid var(--primary-color);
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox-container{
+    display: flex;
+    gap: 5px;
+}
+
+.checkbox-container > input{
+    height: 20px;
+    width: 20px;
+}
+
+button{
+    font-size: 18px;
+    color: #473404;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+.img-container{
+    background-image: url(images/side-image-2x.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.register-ask{
+    margin: auto;
+}
+
+@media (max-width: 1100px){
+    body{
+        grid-template-columns: 1fr;
+    }
+
+    .img-container{
+        display: none;
+    }
+}
+
+@media (max-width: 600px){
+    body{
+        height: 100vh;
+    }
+    
+    .form-container{
+        padding: 5vw;
+    }
+
+    form{
+        margin-top: 100px;
+        padding: 0;
+        background-color: transparent;
+    }
+}
+
